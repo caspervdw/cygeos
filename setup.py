@@ -6,7 +6,10 @@ from Cython.Build import cythonize
 
 ext_modules = [
     Extension(
-        "cygeos.cy_adder", ["cygeos/cy_adder.pyx", "src/adder.c"], include_dirs=["src"]
+        "cygeos.lib", ["src/adder.c", "src/lib.c"]
+    ),
+    Extension(
+        "cygeos.cy_adder", ["cygeos/cy_adder.pyx", "src/adder.c"], include_dirs=["src"],
     )
 ]
 
